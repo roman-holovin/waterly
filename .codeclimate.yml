@@ -21,4 +21,5 @@ ratings:
     - src/**/*.js
 exclude_paths:
   - tests/
-  - dist/
+  - build/
+  - coverage/
