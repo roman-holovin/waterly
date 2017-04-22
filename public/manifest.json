@@ -1,0 +1,30 @@
+{
+  "short_name": "Waterly",
+  "name": "Waterly - water tracker",
+  "icons": [
+    {
+      "src": "assets/drop-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "assets/drop-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/drop-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "assets/drop-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#2CB7E5",
+  "theme_color": "#2CB7E5",
+  "display": "standalone"
+}
