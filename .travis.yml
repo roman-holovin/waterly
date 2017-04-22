@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "6"
+  - "7"
+addons:
+  code_climate:
+    repo_token: 864104b5ce4f12ce54d6d346780b86a35ccf2267c415cf2f5ca4057f6b564eb9
+after_success:
+  - npm run report:coverage
