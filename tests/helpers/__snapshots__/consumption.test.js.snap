@@ -1,0 +1,31 @@
+exports[`consumption add consumption should throw if no value provided 1`] = `"No value provived"`;
+
+exports[`consumption get consumption should return data for 3 days if called without params 1`] = `
+Object {
+  "2017-04-22": Array [],
+  "2017-04-23": Array [],
+  "2017-04-24": Array [
+    Object {
+      "amount": 0.3,
+      "type": "water",
+    },
+    Object {
+      "amount": 0.5,
+      "type": "tea",
+    },
+  ],
+}
+`;
+
+exports[`consumption get consumption should throw if "from" date is greater than "to" 1`] = `"\"From\" date should be before \"to\" date"`;
+
+exports[`consumption remove consumption should remove entry 1`] = `
+Array [
+  Object {
+    "amount": 0.5,
+    "type": "tea",
+  },
+]
+`;
+
+exports[`consumption remove consumption should throw if no index provided 1`] = `"No index provived"`;
