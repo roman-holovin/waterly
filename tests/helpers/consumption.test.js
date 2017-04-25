@@ -5,7 +5,12 @@ import * as consumption from '../../src/helpers/consumption';
 import { STORAGE_KEY, DATE_KEY_FORMAT } from '../../src/constants';
 
 import { getLocalStorageStub } from '../__mocks__/localStorage';
-import { initial, oneDay } from '../__fixtures__/consumption';
+import {
+  initial,
+  oneDay,
+  defaultDateNow,
+  defaultDateInPast
+} from '../__fixtures__/consumption';
 
 describe('consumption', () => {
   beforeAll(() => {
@@ -20,7 +25,10 @@ describe('consumption', () => {
     it('should return data for 3 days if called without params', () => {
       global.localStorage.setFixture(oneDay);
 
-      const entries = consumption.get();
+      const entries = consumption.get({
+        from: defaultDateInPast,
+        to: defaultDateNow,
+      });
       expect(entries).toMatchSnapshot();
     });
 
@@ -45,7 +53,7 @@ describe('consumption', () => {
 
       consumption.add({ value: testEntry });
 
-      const todayKey = format(Date.now(), DATE_KEY_FORMAT);
+      const todayKey = format(defaultDateNow, DATE_KEY_FORMAT);
 
       const str = global.localStorage.getItem(STORAGE_KEY);
       const data = JSON.parse(str);
@@ -66,12 +74,15 @@ describe('consumption', () => {
     it('should remove entry', () => {
       global.localStorage.setFixture(oneDay);
 
-      consumption.remove({ index: 0 });
+      consumption.remove({
+        date: defaultDateNow,
+        index: 0,
+      });
 
       const str = global.localStorage.getItem(STORAGE_KEY);
       const data = JSON.parse(str);
 
-      const todayKey = format(Date.now(), DATE_KEY_FORMAT);
+      const todayKey = format(defaultDateNow, DATE_KEY_FORMAT);
 
       const consumptionEntries = data.consumption[todayKey];
       expect(consumptionEntries).toHaveLength(1);
