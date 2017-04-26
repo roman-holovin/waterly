@@ -1,4 +1,12 @@
-import { STORAGE_KEY } from '../constants';
+import { STORAGE_KEY, INITIAL_STATE } from '../constants';
+
+export function initialize() {
+  const data = get();
+
+  if (!data) {
+    set(INITIAL_STATE);
+  }
+}
 
 export function get() {
   const data = localStorage.getItem(STORAGE_KEY);
@@ -6,7 +14,7 @@ export function get() {
     const result = JSON.parse(data);
     return result;
   } catch(e) {
-    return {};
+    return null;
   }
 }
 
