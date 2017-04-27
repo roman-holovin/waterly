@@ -16,7 +16,8 @@
     "react-test-renderer": "^15.5.4",
     "stylelint-config-standard": "^16.0.0",
     "sw-precache": "^5.1.0",
-    "yarn": "^0.22.0"
+    "yarn": "^0.22.0",
+    "@kadira/storybook": "^2.21.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,6 +26,8 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn build; sw-precache --config=sw-precache-config.json --root=build",
     "deploy": "gh-pages -d build",
-    "report:coverage": "codeclimate-test-reporter < coverage/lcov.info"
+    "report:coverage": "codeclimate-test-reporter < coverage/lcov.info",
+    "storybook": "start-storybook -s public",
+    "build-storybook": "build-storybook -s public"
   }
 }
