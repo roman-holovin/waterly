@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Layout from '../../components/Layout/Layout';
 
-class Home extends Component {
-  render() {
-    return (
-      <Layout>
-        water
-      </Layout>
-    );
-  }
+function Home() {
+  return (
+    <Layout>
+      water
+    </Layout>
+  );
 }
 
 export default Home;

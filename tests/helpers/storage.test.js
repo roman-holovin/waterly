@@ -2,7 +2,7 @@ import * as storage from '../../src/helpers/storage';
 
 import { STORAGE_KEY, INITIAL_STATE } from '../../src/constants';
 
-import { getLocalStorageStub } from '../__mocks__/localStorage';
+import getLocalStorageStub from '../__mocks__/localStorage';
 import { malformed, empty } from '../__fixtures__/consumption';
 
 describe('storage', () => {

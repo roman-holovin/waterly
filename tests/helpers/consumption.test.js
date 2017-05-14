@@ -4,7 +4,7 @@ import * as consumption from '../../src/helpers/consumption';
 
 import { STORAGE_KEY, DATE_KEY_FORMAT } from '../../src/constants';
 
-import { getLocalStorageStub } from '../__mocks__/localStorage';
+import getLocalStorageStub from '../__mocks__/localStorage';
 import {
   oneDay,
   defaultDateNow,

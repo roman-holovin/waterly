@@ -1,4 +1,4 @@
-export function getLocalStorageStub() {
+export default function getLocalStorageStub() {
   let store = {};
 
   return {

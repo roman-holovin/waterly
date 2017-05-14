@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "classnames": "^2.2.5",
     "date-fns": "^1.28.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -11,7 +13,6 @@
   },
   "homepage": "https://dantix.github.io/waterly",
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0",
     "codeclimate-test-reporter": "^0.4.1",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
