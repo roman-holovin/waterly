@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "date-fns": "^1.28.3",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-swipeable": "^4.0.0",
@@ -30,6 +32,7 @@
     "deploy": "gh-pages -d build",
     "report:coverage": "codeclimate-test-reporter < coverage/lcov.info",
     "storybook": "start-storybook -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "precommit": "lint-staged"
   }
 }
