@@ -32,7 +32,7 @@ export const oneDay = {
             amount: 0.5,
           }],
         },
-      }
-    )
+      },
+    ),
   ),
-}
+};

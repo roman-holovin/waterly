@@ -8,7 +8,7 @@ import { malformed, empty } from '../__fixtures__/consumption';
 describe('storage', () => {
   beforeAll(() => {
     global.localStorage = getLocalStorageStub();
-  })
+  });
 
   describe('get', () => {
     it('should return empty object on malformed json in localStorage', () => {
@@ -16,7 +16,7 @@ describe('storage', () => {
 
       const data = storage.get();
       expect(data).toBe(null);
-    })
+    });
   });
 
   describe('initialize', () => {

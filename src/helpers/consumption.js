@@ -12,13 +12,13 @@ export function get({
   to = Date.now(),
 } = {}) {
   if (isAfter(from, to)) {
-    throw new Error('"From" date should be before "to" date')
+    throw new Error('"From" date should be before "to" date');
   }
 
   const data = storage.get();
 
   const range = eachDay(from, to);
-  const keys = range.map(date => format(date, DATE_KEY_FORMAT))
+  const keys = range.map(date => format(date, DATE_KEY_FORMAT));
 
   const result = keys.reduce((acc, key) => {
     acc[key] = data.consumption[key] || [];

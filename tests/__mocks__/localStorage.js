@@ -14,6 +14,6 @@ export function getLocalStorageStub() {
     setFixture(fixture) {
       store = Object.assign({}, fixture);
     },
-  }
+  };
 }
 

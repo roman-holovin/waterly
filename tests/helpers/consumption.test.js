@@ -6,10 +6,9 @@ import { STORAGE_KEY, DATE_KEY_FORMAT } from '../../src/constants';
 
 import { getLocalStorageStub } from '../__mocks__/localStorage';
 import {
-  initial,
   oneDay,
   defaultDateNow,
-  defaultDateInPast
+  defaultDateInPast,
 } from '../__fixtures__/consumption';
 
 describe('consumption', () => {
@@ -94,4 +93,4 @@ describe('consumption', () => {
       expect(assumption).toThrowErrorMatchingSnapshot();
     });
   });
-})
+});

@@ -48,14 +48,16 @@ function simulateSwipe(selector, direction) {
 describe('Timeline', () => {
   it('should be rendered without crashing', () => {
     const root = document.createElement('main');
-    const render = () => ReactDOM.render((
-      <Timeline
-        days={timelineFixture}
-        selectedDay={timelineFixture[timelineFixture.length - 1]}
-      />
-    ), root);
+    const renderFunction = () => {
+      ReactDOM.render((
+        <Timeline
+          days={timelineFixture}
+          selectedDay={timelineFixture[timelineFixture.length - 1]}
+        />
+      ), root);
+    };
 
-    expect(render).not.toThrow();
+    expect(renderFunction).not.toThrow();
   });
 
   it('should contain 3 entries', () => {
@@ -63,7 +65,7 @@ describe('Timeline', () => {
       <Timeline
         days={timelineFixture}
         selectedDay={timelineFixture[3]}
-      />
+      />,
     );
 
     const selector = timeline.find('.timeline__day');
@@ -76,15 +78,15 @@ describe('Timeline', () => {
       <Timeline
         days={timelineFixture.slice(0, 1)}
         selectedDay={timelineFixture[0]}
-      />
+      />,
     );
 
     const selector = timeline.find('.timeline__day');
     const dummyTest = /timeline__day--dummy/;
 
-    expect(selector[0].attribs['class']).toMatch(dummyTest);
-    expect(selector[1].attribs['class']).not.toMatch(dummyTest);
-    expect(selector[2].attribs['class']).toMatch(dummyTest);
+    expect(selector[0].attribs.class).toMatch(dummyTest);
+    expect(selector[1].attribs.class).not.toMatch(dummyTest);
+    expect(selector[2].attribs.class).toMatch(dummyTest);
   });
 
   it('should call onDaySelect on left swipe gesture', () => {
@@ -95,7 +97,7 @@ describe('Timeline', () => {
         days={timelineFixture}
         selectedDay={timelineFixture[3]}
         onDaySelect={selectDayMock}
-      />
+      />,
     );
 
     const selector = timeline.find('.timeline');
@@ -113,7 +115,7 @@ describe('Timeline', () => {
         days={timelineFixture}
         selectedDay={timelineFixture[3]}
         onDaySelect={selectDayMock}
-      />
+      />,
     );
 
     const selector = timeline.find('.timeline');
@@ -128,10 +130,10 @@ describe('Timeline', () => {
 
     const timeline = mount(
       <Timeline
-        days={timelineFixture.slice(0,1)}
+        days={timelineFixture.slice(0, 1)}
         selectedDay={timelineFixture[0]}
         onDaySelect={selectDayMock}
-      />
+      />,
     );
 
     const selector = timeline.find('.timeline');
@@ -146,7 +148,7 @@ describe('Timeline', () => {
       <Timeline
         days={timelineFixture}
         selectedDay={timelineFixture[timelineFixture.length - 2]}
-      />
+      />,
     );
 
     const selector = timeline.find('.timeline__date');
