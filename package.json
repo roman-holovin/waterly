@@ -14,6 +14,11 @@
     "@kadira/storybook": "^2.21.0",
     "codeclimate-test-reporter": "^0.4.1",
     "enzyme": "^2.8.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
     "gh-pages": "^0.12.0",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.5.4",
@@ -30,6 +35,8 @@
     "deploy": "gh-pages -d build",
     "report:coverage": "codeclimate-test-reporter < coverage/lcov.info",
     "storybook": "start-storybook -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint src tests",
+    "lint:fix": "yarn lint -- --fix"
   }
 }
