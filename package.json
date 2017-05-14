@@ -7,7 +7,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-swipeable": "^4.0.0",
-    "recompose": "^0.23.1"
+    "recompose": "^0.23.1",
+    "stylelint": "^7.10.1"
   },
   "homepage": "https://dantix.github.io/waterly",
   "devDependencies": {
@@ -30,6 +31,7 @@
     "deploy": "gh-pages -d build",
     "report:coverage": "codeclimate-test-reporter < coverage/lcov.info",
     "storybook": "start-storybook -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "stylelint \"src/**/*.css\""
   }
 }
