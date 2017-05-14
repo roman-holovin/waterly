@@ -1,6 +1,7 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "unit-whitelist": ["em", "rem", "s", "ms", "vh", "vw", "deg"]
+    "unit-whitelist": ["%", "em", "rem", "s", "ms", "vh", "vw", "deg"],
+    "declaration-empty-line-before": ["never", { "ignore": "after-declaration" }]
   }
 }
