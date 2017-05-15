@@ -1,8 +1,8 @@
 import format from 'date-fns/format';
 
-import * as consumption from '../../src/helpers/consumption';
+import * as consumption from './consumption';
 
-import { STORAGE_KEY, DATE_KEY_FORMAT } from '../../src/constants';
+import { STORAGE_KEY, DATE_KEY_FORMAT } from '../../constants';
 
 import { getLocalStorageStub } from '../__mocks__/localStorage';
 import {
@@ -10,7 +10,7 @@ import {
   oneDay,
   defaultDateNow,
   defaultDateInPast
-} from '../__fixtures__/consumption';
+} from '../storage/storage.fixtures.js';
 
 describe('consumption', () => {
   beforeAll(() => {

@@ -1,5 +1,5 @@
 import format from 'date-fns/format';
-import { STORAGE_KEY, DATE_KEY_FORMAT, INITIAL_STATE } from '../../src/constants';
+import { STORAGE_KEY, DATE_KEY_FORMAT, INITIAL_STATE } from '../../constants';
 
 export const empty = {
   [STORAGE_KEY]: null,

@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 
-import Timeline from '../components/Timeline/Timeline';
-import timelineFixture from '../../tests/__fixtures__/timeline';
+import Timeline from './Timeline';
+import timelineFixture from './timeline.fixtures';
 
 storiesOf('Timeline', module)
   .add('today', () => (

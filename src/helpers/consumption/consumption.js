@@ -3,9 +3,9 @@ import eachDay from 'date-fns/each_day';
 import isAfter from 'date-fns/is_after';
 import format from 'date-fns/format';
 
-import { DATE_KEY_FORMAT } from '../constants';
+import { DATE_KEY_FORMAT } from '../../constants';
 
-import * as storage from './storage';
+import * as storage from '../storage/storage';
 
 export function get({
   from = subDays(Date.now(), 2),

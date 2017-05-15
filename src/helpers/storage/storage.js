@@ -1,4 +1,4 @@
-import { STORAGE_KEY, INITIAL_STATE } from '../constants';
+import { STORAGE_KEY, INITIAL_STATE } from '../../constants';
 
 export function initialize() {
   const data = get();
