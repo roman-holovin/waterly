@@ -1,9 +1,9 @@
-import * as storage from '../../src/helpers/storage';
+import * as storage from './storage';
 
-import { STORAGE_KEY, INITIAL_STATE } from '../../src/constants';
+import { STORAGE_KEY, INITIAL_STATE } from '../../constants';
 
 import { getLocalStorageStub } from '../__mocks__/localStorage';
-import { malformed, empty } from '../__fixtures__/consumption';
+import { malformed, empty } from './storage.fixtures.js';
 
 describe('storage', () => {
   beforeAll(() => {

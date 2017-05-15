@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 import { render, mount } from 'enzyme';
 
-import Timeline from '../../../src/components/Timeline/Timeline';
-import timelineFixture from '../../__fixtures__/timeline';
+import Timeline from './Timeline';
+import timelineFixture from './timeline.fixtures';
 
 function simulateSwipe(selector, direction) {
   const directions = {
