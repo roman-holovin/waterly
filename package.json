@@ -25,6 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
+    "test:watch": "yarn test -- --watch",
+    "test:watchAll": "yarn test -- --watchAll",
     "eject": "react-scripts eject",
     "predeploy": "yarn build; sw-precache --config=sw-precache-config.json --root=build",
     "deploy": "gh-pages -d build",
